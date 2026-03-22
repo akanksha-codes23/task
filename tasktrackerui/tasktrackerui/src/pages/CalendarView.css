@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+
+.calendar-page{
+
+min-height:100vh;
+
+padding:90px 20px;
+
+background:linear-gradient(120deg,#fdfbff,#eef2ff,#f9fafc);
+
+background-size:200% 200%;
+
+animation:bgMove 12s ease infinite;
+
+position:relative;
+
+overflow:hidden;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+}
+
+/* BACKGROUND ANIMATION */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* ORANGE BLOB */
+
+.calendar-page::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+height:420px;
+
+background:linear-gradient(135deg,#ff8a7a,#ffb36b);
+
+border-radius:50%;
+
+top:-150px;
+left:-120px;
+
+filter:blur(140px);
+
+opacity:.6;
+
+}
+
+/* PURPLE BLOB */
+
+.calendar-page::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+height:450px;
+
+background:linear-gradient(135deg,#6a5cff,#8b5cf6);
+
+border-radius:50%;
+
+bottom:-180px;
+right:-140px;
+
+filter:blur(150px);
+
+opacity:.6;
+
+}
+
+/* ===== TITLE ===== */
+
+.calendar-page h2{
+
+font-size:30px;
+
+font-weight:600;
+
+color:#5b46ff;
+
+margin-bottom:25px;
+
+z-index:2;
+
+}
+
+/* ===== CALENDAR CARD ===== */
+
+.fc{
+
+width:100%;
+
+max-width:1000px;
+
+background:rgba(255,255,255,0.6);
+
+backdrop-filter:blur(18px);
+
+border-radius:26px;
+
+padding:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+z-index:2;
+
+}
+
+/* ===== HEADER ===== */
+
+.fc-toolbar-title{
+
+font-size:20px;
+
+font-weight:600;
+
+color:#374151;
+
+}
+
+/* NAV BUTTONS */
+
+.fc-button{
+
+background:linear-gradient(135deg,#6a5cff,#8b5cf6) !important;
+
+border:none !important;
+
+border-radius:10px !important;
+
+padding:6px 12px !important;
+
+}
+
+.fc-button:hover{
+
+transform:translateY(-1px);
+
+box-shadow:0 5px 15px rgba(106,92,255,0.4);
+
+}
+
+/* TODAY BUTTON */
+
+.fc-today-button{
+
+background:#22c55e !important;
+
+}
+
+/* DAY CELLS */
+
+.fc-daygrid-day{
+
+transition:.2s;
+
+}
+
+.fc-daygrid-day:hover{
+
+background:#f8fafc;
+
+}
+
+/* EVENTS */
+
+.fc-event{
+
+border:none !important;
+
+border-radius:8px !important;
+
+font-size:12px;
+
+padding:3px 6px;
+
+}
+
+/* ===== PRIORITY LEGEND ===== */
+
+.calendar-legend{
+
+margin-top:20px;
+
+display:flex;
+
+gap:20px;
+
+z-index:2;
+
+}
+
+.legend-item{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+font-size:13px;
+
+color:#374151;
+
+}
+
+.legend-color{
+
+width:14px;
+height:14px;
+
+border-radius:4px;
+
+}
+
+.legend-high{
+
+background:#ef4444;
+
+}
+
+.legend-medium{
+
+background:#facc15;
+
+}
+
+.legend-low{
+
+background:#22c55e;
+
+}

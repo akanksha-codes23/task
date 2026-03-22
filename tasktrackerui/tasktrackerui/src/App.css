@@ -1,0 +1,107 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* PAGE WRAPPER */
+  .page-container {
+    padding: 12px;
+  }
+
+  /* HEADINGS */
+  .page-heading {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* SEARCH / CREATE CARD */
+  .search-card,
+  .task-card,
+  .create-card {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  /* FILTERS → COLUMN */
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters select {
+    width: 100%;
+  }
+
+  /* TASK LIST */
+  .task-list {
+    gap: 16px;
+  }
+
+  /* ACTION BUTTONS */
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+
+  .page-heading {
+    font-size: 20px;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 14px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+}
+

@@ -1,0 +1,86 @@
+.progress-page {
+  padding: 30px;
+  min-height: 100vh;
+  background: #f9fafb;
+  color: #111827;
+}
+
+.progress-page.dark {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* HEADER */
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.theme-btn {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* SUMMARY */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.summary-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  border-top: 5px solid #6366f1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.progress-page.dark .summary-card,
+.progress-page.dark .chart-card {
+  background: #1e293b;
+}
+
+.summary-card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* TOGGLE */
+.view-toggle {
+  margin-bottom: 20px;
+}
+
+.view-toggle button {
+  padding: 10px 22px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.view-toggle .active {
+  background: #6366f1;
+  color: white;
+}
+
+/* CHARTS */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.chart-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}

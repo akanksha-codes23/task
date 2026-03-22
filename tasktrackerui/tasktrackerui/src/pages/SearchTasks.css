@@ -1,0 +1,364 @@
+/* ===== PAGE ===== */
+
+.page-container{
+
+padding-top:90px;
+padding-left:20px;
+padding-right:20px;
+
+}
+
+/* TITLE */
+
+.page-heading{
+
+text-align:center;
+
+font-size:30px;
+
+color:#5b46ff;
+
+margin-bottom:30px;
+
+font-weight:600;
+
+}
+
+/* ===== SEARCH CARD ===== */
+
+.search-card{
+
+max-width:900px;
+
+margin:auto;
+
+padding:22px;
+
+border-radius:26px;
+
+background:rgba(255,255,255,0.55);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.8);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+margin-bottom:40px;
+
+}
+
+.search-card input{
+
+width:100%;
+
+padding:14px;
+
+border-radius:14px;
+
+border:none;
+
+background:#fdecef;
+
+margin-bottom:15px;
+
+font-size:14px;
+
+}
+
+.search-card input:focus{
+
+background:white;
+
+box-shadow:0 0 0 2px rgba(123,104,255,.25);
+
+outline:none;
+
+}
+
+/* FILTERS */
+
+.filters{
+
+display:flex;
+
+gap:10px;
+
+}
+
+.filters select{
+
+flex:1;
+
+padding:12px;
+
+border-radius:14px;
+
+border:none;
+
+background:#fdecef;
+
+font-size:14px;
+
+}
+
+/* ===== GRID (same as ShowTasks) ===== */
+
+.task-list{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:22px;
+
+max-width:1100px;
+
+margin:auto;
+
+}
+
+/* ===== CARD ===== */
+
+.task-card{
+
+padding:22px;
+
+border-radius:26px;
+
+background:rgba(255,255,255,0.55);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.8);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+transition:.25s;
+
+}
+
+.task-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 25px 70px rgba(0,0,0,0.18);
+
+}
+
+/* TITLE */
+
+.task-card h3{
+
+font-size:16px;
+
+margin-bottom:6px;
+
+}
+
+/* DESCRIPTION */
+
+.task-card p{
+
+font-size:14px;
+
+margin-bottom:6px;
+
+}
+
+/* FIELD STYLE */
+
+.created-date,
+.due-date,
+.badge{
+
+background:#fdecef;
+
+padding:10px;
+
+border-radius:12px;
+
+font-size:13px;
+
+margin-top:5px;
+
+display:block;
+
+}
+
+/* OVERDUE */
+
+.overdue{
+
+color:#dc2626;
+
+font-weight:600;
+
+}
+
+.overdue-warning{
+
+font-size:12px;
+
+color:#dc2626;
+
+margin-top:5px;
+
+}
+
+/* EDIT INPUTS */
+
+.task-card input,
+.task-card textarea,
+.task-card select{
+
+width:100%;
+
+padding:14px;
+
+margin-top:10px;
+
+border-radius:14px;
+
+border:none;
+
+background:#fdecef;
+
+font-size:14px;
+
+}
+
+.task-card textarea{
+
+resize:none;
+min-height:80px;
+
+}
+
+.task-card input:focus,
+.task-card textarea:focus,
+.task-card select:focus{
+
+background:white;
+
+box-shadow:0 0 0 2px rgba(123,104,255,.25);
+
+outline:none;
+
+}
+
+/* ACTION BUTTONS */
+
+.actions{
+
+display:flex;
+
+gap:8px;
+
+margin-top:12px;
+
+}
+
+.actions button{
+
+padding:10px 14px;
+
+border:none;
+
+border-radius:18px;
+
+background:linear-gradient(135deg,#6a5cff,#8b5cf6);
+
+color:white;
+
+font-weight:600;
+
+font-size:12px;
+
+cursor:pointer;
+
+}
+
+.actions button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 8px 20px rgba(106,92,255,0.4);
+
+}
+
+.actions .danger{
+
+background:#dc2626;
+
+}
+
+/* NO DATA */
+
+.no-data{
+
+text-align:center;
+
+grid-column:1 / -1;
+
+font-size:16px;
+
+color:#6b7280;
+
+}
+
+/* ===== PAGINATION ===== */
+
+.pagination{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+}
+
+.pagination button{
+
+padding:8px 14px;
+
+border:none;
+
+border-radius:10px;
+
+background:#6a5cff;
+
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+
+}
+
+.pagination .active{
+
+background:#4338ca;
+
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:900px){
+
+.task-list{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:500px){
+
+.task-list{
+grid-template-columns:1fr;
+}
+
+}

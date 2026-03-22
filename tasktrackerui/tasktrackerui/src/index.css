@@ -1,0 +1,85 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ===== GLOBAL BACKGROUND ===== */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #eef2ff 0%,
+    #f8fafc 50%,
+    #fdf2f8 100%
+  );
+  color: #111827;
+}
+
+/* ===== CARDS ===== */
+.card,
+.create-card,
+.search-card,
+.task-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== INPUTS ===== */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1976d2;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #2563eb;
+  color: #ffffff;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #1e40af;
+}
+
+button.danger {
+  background-color: #dc2626 !important;
+}
+
+button.danger:hover {
+  background-color: #991b1b !important;
+}
+
+/* ===== BADGE ===== */
+.badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  background: #e0e7ff;
+  color: #1e40af;
+}

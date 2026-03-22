@@ -1,0 +1,13 @@
+# React
+frontend/node_modules/
+frontend/dist/
+
+# Spring Boot
+backend/target/
+*.log
+
+# Environment files
+.env
+
+# OS files
+.DS_Store

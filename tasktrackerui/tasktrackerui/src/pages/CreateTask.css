@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:"Poppins",sans-serif;
+background:#f7f8fc;
+}
+
+/* PAGE */
+
+.create-page{
+
+min-height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+
+padding-top:80px;
+
+background:linear-gradient(120deg,#fdfbff,#eef2ff,#f9fafc);
+
+background-size:200% 200%;
+
+animation:bgMove 12s ease infinite;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* background animation */
+
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+/* ORANGE BLOB */
+
+.create-page::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+height:420px;
+
+background:linear-gradient(135deg,#ff8a7a,#ffb36b);
+
+border-radius:50%;
+
+top:-150px;
+left:-120px;
+
+filter:blur(140px);
+
+opacity:.7;
+
+}
+
+/* PURPLE BLOB */
+
+.create-page::after{
+
+content:"";
+
+position:absolute;
+
+width:450px;
+height:450px;
+
+background:linear-gradient(135deg,#6a5cff,#8b5cf6);
+
+border-radius:50%;
+
+bottom:-180px;
+right:-140px;
+
+filter:blur(150px);
+
+opacity:.7;
+
+}
+
+/* CARD */
+
+.create-card{
+
+width:420px;
+
+padding:40px;
+
+border-radius:28px;
+
+background:rgba(255,255,255,0.55);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,0.8);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* TITLE */
+
+.create-card h2{
+
+text-align:center;
+
+font-size:30px;
+
+color:#5b46ff;
+
+margin-bottom:25px;
+
+font-weight:600;
+
+}
+
+/* FORM */
+
+.create-card form{
+
+display:flex;
+flex-direction:column;
+
+}
+
+/* INPUTS */
+
+.create-card input,
+.create-card textarea,
+.create-card select{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:16px;
+
+border-radius:14px;
+
+border:none;
+
+outline:none;
+
+font-size:14px;
+
+font-family:"Poppins";
+
+background:#fdecef;
+
+transition:.25s;
+
+}
+
+/* TEXTAREA */
+
+.create-card textarea{
+
+resize:none;
+min-height:90px;
+
+}
+
+/* INPUT FOCUS */
+
+.create-card input:focus,
+.create-card textarea:focus,
+.create-card select:focus{
+
+background:white;
+
+box-shadow:0 0 0 2px rgba(123,104,255,.25);
+
+}
+
+/* BUTTON */
+
+.create-card button{
+
+margin-top:10px;
+
+padding:14px;
+
+border:none;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#6a5cff,#8b5cf6);
+
+color:white;
+
+font-weight:600;
+
+font-size:15px;
+
+cursor:pointer;
+
+transition:.25s;
+
+}
+
+/* BUTTON HOVER */
+
+.create-card button:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 10px 25px rgba(106,92,255,0.45);
+
+}
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+.create-card{
+width:90%;
+padding:30px;
+}
+
+}
